@@ -8,7 +8,7 @@ $chk = $db->count($_POST);
 
 if ($chk) {
   echo $chk;
-  $_SESSION[$table]=$POST['acc'];
+  $_SESSION[$table]=$_POST['acc'];
 } else {
   echo $chk;
 }
