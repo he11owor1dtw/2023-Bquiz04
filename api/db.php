@@ -4,7 +4,7 @@ session_start();
 class DB
 {
 
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db19_3";
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db19_4";
     // protected $dsn = "mysql:host=localhost;charset=utf8;dbname=s1120419";
 
     protected $pdo;
@@ -152,14 +152,5 @@ function to($url)
     header("location:$url");
 }
 
-$sess = [
-    1 => '14:00~16:00',
-    2 => '16:00~18:00',
-    3 => '18:00~20:00',
-    4 => '20:00~22:00',
-    5 => '22:00~24:00',
-];
 
-$Poster = new DB('poster');
-$Movie = new DB('movie');
-$Order = new DB('orders');
+$Bottom = new DB('bottom');

@@ -1,5 +1,5 @@
 <?php
-include_once "db.php";
+include_once "./api/db.php";
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -37,15 +37,15 @@ include_once "db.php";
 			<?php
 			$do = $_GET['do'] ?? 'main';
 			$file = "./back/{do}.php";
-			if ($file_exists($file)) {
+			if (file_exists($file)) {
 				include $file;
 			} else {
-				include "../back/{do}.php";
+				include "./back/admin.php";
 			}
 			?>
 		</div>
-		<div id="bottom" style="line-height:70px; color:#FFF; background:url(./icon/bot.png);" class="ct">
-			頁尾版權 : </div>
+		<div id="bottom" style="line-height:70px;background:url(./icon/bot.png); color:#FFF;" class="ct">
+			<?= $Bottom->find(1)['bottom']; ?> </div>
 	</div>
 
 	<Script src="./js/jquery-3.4.1.min.js"></Script>
