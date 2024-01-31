@@ -10,6 +10,7 @@ include_once "./api/db.php";
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>┌精品電子商務網站」</title>
 	<link href="./css/css.css" rel="stylesheet" type="text/css">
+	<Script src="./js/jquery-3.4.1.min.js"></Script>
 	<script src="./js/js.js"></script>
 </head>
 
@@ -47,8 +48,6 @@ include_once "./api/db.php";
 		<div id="bottom" style="line-height:70px;background:url(./icon/bot.png); color:#FFF;" class="ct">
 			<?= $Bottom->find(1)['bottom']; ?> </div>
 	</div>
-
-	<Script src="./js/jquery-3.4.1.min.js"></Script>
 </body>
 
 </html>
