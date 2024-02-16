@@ -61,12 +61,17 @@ if ($type == 0) {
 foreach ($goods as $good) {
 ?>
   <div class='item'>
-    <div class="img">
-      <img src="./img/<?= $good['img']; ?>" style="width:85%;height:120px">
+    <div class="img" style="text-align:center">
+      <a href="?do=detail&id=<?= $good['id']; ?>">
+        <img src="./img/<?= $good['img']; ?>" style="width:85%;height:120px">
+      </a>
     </div>
     <div class="info">
       <div class='ct tt'><?= $good['name']; ?></div>
-      <div>價錢：<?= $good['price']; ?></div>
+      <div>
+        價錢：<?= $good['price']; ?>
+        <img src="./icon/0402.jpg" style="float:right">
+      </div>
       <div>規格：<?= $good['spec']; ?></div>
       <div>簡介：<?= $good['intro']; ?></div>
     </div>
