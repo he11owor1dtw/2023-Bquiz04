@@ -157,4 +157,4 @@ $Bottom = new DB('bottom');
 $Mem = new DB('mem');
 $Admin = new DB('admin');
 $Type = new DB('type');
-$Good = new DB('goods');
+$Goods = new DB('goods');
