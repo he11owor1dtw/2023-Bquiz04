@@ -55,13 +55,13 @@ include_once "./api/db.php";
         </div>
         <div id="left" class="ct">
             <div style="min-height:400px;">
-                <a>全部商品(<?= $Goods->count(['sh' => 1]); ?>)</a>
+                <a href='?type=0'>全部商品(<?= $Goods->count(['sh' => 1]); ?>)</a>
                 <?php
                 $bigs = $Type->all(['big_id' => 0]);
                 foreach ($bigs as $big) {
                 ?>
                     <div class="ww">
-                        <a href="">
+                        <a href="?type=<?= $big['id']; ?>">
                             <?= $big['name']; ?>(<?= $Goods->count(['sh' => 1, 'big' => $big['id']]); ?>)
                         </a>
                         <div class="s">
@@ -70,7 +70,7 @@ include_once "./api/db.php";
                                 $mids = $Type->all(["big_id" => $big['id']]);
                                 foreach ($mids as $mid) {
                             ?>
-                                    <a href="">
+                                    <a href="?type=<?= $mid['id']; ?>">
                                         <?= $mid['name']; ?>(<?= $Goods->count(['sh' => 1, 'mid' => $mid['id']]) ?>)
                                     </a>
                             <?php
