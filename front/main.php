@@ -73,7 +73,7 @@ foreach ($goods as $good) {
         <img src="./icon/0402.jpg" style="float:right" onclick="location.href='?do=buycart&id=<?= $good['id']; ?>&qt=1'">
       </div>
       <div>規格：<?= $good['spec']; ?></div>
-      <div>簡介：<?= $good['intro']; ?></div>
+      <div>簡介：<?= mb_substr($good['intro'], 0, 25); ?>...</div>
     </div>
   </div>
 <?php
